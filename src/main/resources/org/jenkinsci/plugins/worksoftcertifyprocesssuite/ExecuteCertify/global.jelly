@@ -1,0 +1,26 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+
+  <f:section title="Worksoft Certify ProcessSuite">
+    <f:entry title="UserName" field="username">
+    <f:textbox />
+    </f:entry>
+    <f:entry title="Password" field="password">
+    <f:password />
+    </f:entry >
+     <f:entry title="DataBaseServer" field="databaseServer">
+    <f:textbox />
+    </f:entry >
+    <f:entry title="DataBaseName" field="databaseName">
+    <f:textbox />
+    </f:entry >
+  <f:optionalBlock name="sqlauth" field="sqlauth" title="SQL Authentication" inline="true" checked="${instance.sqlauth}">
+    <f:entry title="SQLUserName" field="databaseUsername">
+    <f:textbox />
+     </f:entry>
+    <f:entry title="SQLPassword" field="databasePassword">
+     <f:password />
+     </f:entry>
+</f:optionalBlock>
+  </f:section>
+</j:jelly>
